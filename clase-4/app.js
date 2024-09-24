@@ -7,7 +7,7 @@ const app = express()
 
 app.use(json())
 
-app.use(corsMiddleware)
+app.use(corsMiddleware())
 
 app.disable('x-powered-by')
 
@@ -16,5 +16,5 @@ app.use('/movies', moviesRouter)
 const PORT = process.env.PORT ?? 1234
 
 app.listen(PORT, () => {
-  console.log('Escuchando en https://localhost.com:1234')
+  console.log(`Escuchando en http://localhost:${PORT}`)
 })

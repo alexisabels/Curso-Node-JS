@@ -10,6 +10,7 @@ app.use(cors({
     const ACCEPTED_ORIGINS = [
       'http://localhost:8080',
       'http://localhost:1234',
+      'http://localhost:1234',
       'https://www.alexisabel.com/',
       'http://locahost:4321'
     ]
@@ -120,5 +121,5 @@ app.patch('/movies/:id', (req, res) => {
 const PORT = process.env.PORT ?? 1234
 
 app.listen(PORT, () => {
-  console.log('Escuchando en https://localhost.com:1234')
+  console.log('Escuchando en https://localhost:1234')
 })
